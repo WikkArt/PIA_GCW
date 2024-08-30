@@ -82,9 +82,11 @@ body{
     box-shadow:-10px 10px var(--verde-claro), -15px 15px 10px rgba(31, 51, 71, 0.3);
     color: var(--amarillo-palido);
     font-size: 35px;
+    transition: 150ms all;
 }
 
 #idMIBotones button:active{
     background-image: radial-gradient(100% 100% at 100% 0, rgb(210, 208, 71) 0, rgb(246, 130, 36) 100%);
     box-shadow:-10px 10px var(--azul-pastel), -15px 15px 10px rgba(31, 51, 71, 0.3);
+    font-size: 32px;
 }
