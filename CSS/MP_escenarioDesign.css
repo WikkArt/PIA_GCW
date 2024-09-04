@@ -21,7 +21,9 @@ body{
     margin: 0;
 }
 
-#idRegresar{
+/* Botón de regresar */
+
+#btnRegresar{
     background-image: radial-gradient(100% 100% at 100% 0, var(--verde-claro) 0, var(--naranja-zanahoria) 100%);
     border: 4px rgb(31, 51, 71) solid ;
     position: absolute;
@@ -31,7 +33,29 @@ body{
     transition: 200ms all;
 }
 
-#idRegresar img:hover{
+#btnRegresar img:hover{
+    height: 80px;
+    width: 80px;
+}
+
+/* Botón de récords */
+
+.records{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#btnRecords{
+    background-image: radial-gradient(100% 100% at 100% 0, var(--verde-claro) 0, var(--naranja-zanahoria) 100%);
+    border: 4px rgb(31, 51, 71) solid ;
+    position: absolute;
+    border-radius: 50%;
+    margin: 20px;
+    cursor: pointer;
+    transition: 200ms all;
+}
+
+#btnRecords img:hover{
     height: 80px;
     width: 80px;
 }
@@ -80,7 +104,7 @@ body{
     border-radius: 30px;
     width: 20%;
     min-width: 300px;
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     transition: 200ms all;
 }
 
@@ -140,43 +164,137 @@ input[type='radio']{
     width: 25%;
 }
 
-/* Nombre de usuario */
-.nameSection{
+/* Columna derecha */
 
+.dataSection{
+    width: 22%;
+}
+
+/* Nombre de usuario */
+
+/* Popup */
+
+.popup {
+    position:absolute;
+    margin-left: 325px; 
+}
+
+.popup img{
+    margin-top: 5px;
+    height: 30px;
+}
+
+/* El mensaje */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: var(--naranja-zanahoria);
+    color: var(--amarillo-palido);
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 7px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 120%;
+    margin-left: -80px;
+}
+
+/* Colita del Popup */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -34px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--naranja-zanahoria) transparent transparent transparent;
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+.dataSection[aria-disabled="false"] .nameSection {
+    opacity: 1;
+}
+
+.nameSection{
+    opacity: 0.5;
+    width: 100%;
+    min-width: max-content;
+    background-color: var(--verde-claro);
+    background: linear-gradient(0deg, var(--verde-claro) 0%, var(--turqueza) 100%);
+    text-align: center;
+    border-radius: 30px;
+    border: 5px transparent solid;
+    padding: 0 30px 20px 30px;
+    margin-bottom: 10px;
+}
+
+.nameSection h2{
+    margin-bottom: 5px;
+}
+
+#txtUsername{
+    width: 70%;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    font-family: "MuseoModerno";
+    color: var(--azul-pastel);
+}
+
+#txtUsername:focus{
+    background-color: var(--amarillo-palido);
+    outline: none;
 }
 
 /* Boton para iniciar la partida */
 
-[aria-disabled="false"].chosenStage {
+.dataSection[aria-disabled="false"] .chosenStage {
     opacity: 1;
 }
 
 .chosenStage{
     opacity: 0.5;
+    width: 100%;
+    min-width: max-content;
     background-color: var(--verde-claro);
     background: linear-gradient(0deg, var(--verde-claro) 0%, var(--turqueza) 100%);
     text-align: center;
-    width: 25%;
-    min-width: 350px;
-    height: max-content;
     border-radius: 30px;
     border: 5px transparent solid;
     padding: 0 30px 20px 30px;
 }
 
 .chosenStage h2{
-    font-size: 35px;
+    font-size: 30px;
     color: rgb(31, 51, 71)
 }
 
 .chosenStage img{
-    width: 180px;
+    width: 150px;
     margin-top: -40px;
     margin-bottom: 10px;
 }
 
-[aria-disabled="true"] #btnEscenario{
-    cursor:default;
+.dataSection[aria-disabled="false"] #btnEscenario{
+    cursor: pointer;
 }
 
 #btnEscenario{
@@ -192,11 +310,11 @@ input[type='radio']{
     width: max-content;
     line-height: 140%;
     font-family: "MuseoModerno";
-    cursor: pointer;
+    cursor:default;
     transition: 200ms all;
 }
 
-.chosenStage[aria-disabled="false"] #btnEscenario:hover{
+.dataSection[aria-disabled="false"] #btnEscenario:hover{
     background-image: radial-gradient(100% 100% at 100% 0, var(--verde-claro) 0, var(--naranja-zanahoria) 100%);
     box-shadow:-10px 10px rgb(67, 158, 112), -15px 15px 10px rgba(31, 51, 71, 0.3);
     color: var(--amarillo-palido);
@@ -204,7 +322,7 @@ input[type='radio']{
     transition: 150ms all;
 }
 
-.chosenStage[aria-disabled="false"] #btnEscenario:active{
+.dataSection[aria-disabled="false"] #btnEscenario:active{
     background-image: radial-gradient(100% 100% at 100% 0, rgb(210, 208, 71) 0, rgb(246, 130, 36) 100%);
     box-shadow:-10px 10px rgb(56, 136, 91), -15px 15px 10px rgba(31, 51, 71, 0.3);
     font-size: 32px;

@@ -21,7 +21,7 @@ body{
     margin: 0;
 }
 
-#idRegresar{
+#btnRegresar{
     background-image: radial-gradient(100% 100% at 100% 0, var(--verde-claro) 0, var(--naranja-zanahoria) 100%);
     border: 4px rgb(31, 51, 71) solid ;
     position: absolute;
@@ -31,7 +31,7 @@ body{
     transition: 200ms all;
 }
 
-#idRegresar img:hover{
+#btnRegresar img:hover{
     height: 80px;
     width: 80px;
 }
