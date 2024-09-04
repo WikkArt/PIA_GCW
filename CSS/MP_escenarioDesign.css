@@ -65,7 +65,7 @@ body{
     font-size: 20px;
 }
 
-/* Escenarios */
+/* Escenario */
 
 #idEscenarios.container{
     display: flex;
@@ -106,14 +106,9 @@ body{
     padding: 0 10px 10px 10px;
 }
 
-#idFacil::after{
-    content: " FÁCIL";
-    color: rgb(44, 94, 170);
-}
-
-#idDificil::after{
-    content: " DIFÍCIL";
-    color:brown;
+#idNormal::after{
+    content: " NORMAL";
+    color:rgb(210, 208, 71);
 }
 
 .selectStage:hover{
@@ -145,6 +140,11 @@ input[type='radio']{
     width: 25%;
 }
 
+/* Nombre de usuario */
+.nameSection{
+
+}
+
 /* Boton para iniciar la partida */
 
 [aria-disabled="false"].chosenStage {
@@ -170,7 +170,7 @@ input[type='radio']{
 }
 
 .chosenStage img{
-    width: 250px;
+    width: 180px;
     margin-top: -40px;
     margin-bottom: 10px;
 }
@@ -210,18 +210,15 @@ input[type='radio']{
     font-size: 32px;
 }
 
-
 /* Fondo en movimiento*/
 
 .wrapper {
   animation: scroll 10s linear infinite;
-  background: url("../Images/mInicio/16Ejemplo.jpg") var(--azul-pastel);
+  background: url("../Images/mInicio/16Ejemplo.jpg") var(--turqueza);
   background-blend-mode: multiply;
   height: 100vh;
   min-width: 360px;
   width: 100%;
-  /* perspective: 1000px;
-  perspective-origin: 50% 50%; */
 }
 
 @keyframes scroll {
@@ -229,10 +226,3 @@ input[type='radio']{
     background-position: 0px -3750%;
   }
 }
-
-/* Fallback if the operatring system prefers reduced motion*/
-/* @media (prefers-reduced-motion) {
-  .wrapper {
-    animation: scroll 1000s linear infinite;
-  }
-} */
