@@ -54,9 +54,15 @@ body{
 
 /* Botones */
 
+#idPBotones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #idPBotones a{
     display: block;
-    text-align: center;
+    text-decoration: none; 
 }
 
 #idPBotones button{
@@ -66,14 +72,52 @@ body{
     box-shadow:-5px 5px var(--azul-pastel), -5px 5px 10px rgb(31, 51, 71);
     width: max-content;
     padding: 12px;
-    line-height: 140%;
     margin-block: 15px;
     font-size: 28px;
     border-radius: 20px;
     font-family: "MuseoModerno";
+    display: flex;
+    align-items: center;
     cursor: pointer;
     transition: 200ms all;
 }
+
+#idPBotones button::before{
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px 0 5px;
+}
+
+#idPBotones button.btn-1::before{
+    width: 50px;
+    height: 50px;
+    margin-right: -3px;
+    margin-left: -5px;
+    background: url("../Images/Iconos/continuar.png") no-repeat;
+    background-size: contain;
+}
+
+#idPBotones button.btn-2::before{
+    width: 40px;
+    height: 40px;
+    background: url("../Images/Iconos/reiniciar.png") no-repeat;
+    background-size: contain;
+}
+
+#idPBotones button.btn-3::before{
+    background: url("../Images/Iconos/opciones.png") no-repeat;
+    background-size: contain;
+}
+
+#idPBotones button.btn-4::before{
+    width: 40px;
+    height: 40px;
+    background: url("../Images/Iconos/inicio.png") no-repeat;
+    background-size: contain;
+}
+
 
 #idPBotones button:hover{
     background-image: radial-gradient(100% 100% at 100% 0, var(--verde-claro) 0, var(--naranja-zanahoria) 100%);

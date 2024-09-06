@@ -14,8 +14,6 @@
   --amarillo-palido: rgb(255, 255, 221);
   --naranja-zanahoria: rgb(255, 155, 43);
   --verde-claro: #d2d047;
-  /* background: url(../Images/mInicio/16Ejemplo.jpg) right;
-  background-size: cover; */
 }
 
 body{
@@ -47,6 +45,10 @@ body{
     font-family: "MajorMonoDisplay";
 }
 
+#idMIBotones a:link { 
+  text-decoration: none; 
+} 
+
 #idMIBotones button{
     background-image: radial-gradient(100% 100% at 100% 0, var(--verde-claro) 0, var(--turqueza) 100%);
     color: var(--amarillo-palido);
@@ -54,41 +56,47 @@ body{
     box-shadow:-5px 5px var(--azul-pastel), -5px 5px 10px rgb(31, 51, 71);
     width: max-content;
     padding: 12px;
-    line-height: 140%;
     margin-block: 15px;
     font-size: 28px;
     border-radius: 20px;
     font-family: "MuseoModerno";
+    display: flex;
+    align-items: center;
     cursor: pointer;
     transition: 200ms all;
 }
 
 #idMIBotones button::before{
     content: "";
-    display: block;
+    display: inline-block;
     width: 40px;
     height: 40px;
-    float: left;
     margin: 0 10px 0 5px;
 }
 
 #idMIBotones button.btn-1::before{
-    background: url("../Images/mInicio/Mas.png") no-repeat;
+    width: 50px;
+    height: 50px;
+    background: url("../Images/Iconos/inicioSP.png") no-repeat;
     background-size: contain;
 }
 
 #idMIBotones button.btn-2::before{
-    background: url("../Images/mInicio/Mas.png") no-repeat;
+    width: 55px;
+    height: 55px;
+    background: url("../Images/Iconos/inicioMP.png") no-repeat;
     background-size: contain;
 }
 
 #idMIBotones button.btn-3::before{
-    background: url("../Images/mInicio/Mas.png") no-repeat;
+    background: url("../Images/Iconos/opciones.png") no-repeat;
     background-size: contain;
 }
 
 #idMIBotones button.btn-4::before{
-    background: url("../Images/mInicio/Mas.png") no-repeat;
+    width: 50px;
+    height: 50px;
+    background: url("../Images/Iconos/creditos.png") no-repeat;
     background-size: contain;
 }
 
@@ -119,5 +127,5 @@ html, body {
   left: 0;
   top: 0;
   position: absolute;
-  background: url('../Images/mInicio/16Ejemplo.jpg') no-repeat left center / cover;
+  background: url('../Images/Backgrounds/16Ejemplo.jpg') no-repeat left center / cover;
 }

@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "MajorMonoDisplay";
+    src: url("../Fonts/MajorMonoDisplay-Regular.ttf");
+}
+
+@font-face {
+    font-family: "MuseoModerno";
+    src: url("../Fonts/MuseoModerno-VariableFont_wght.ttf");
+}
+
+:root {
+  --azul-pastel: rgb(95, 143, 163);
+  --turqueza: #61baa4;
+  --amarillo-palido: rgb(255, 255, 221);
+  --naranja-zanahoria: rgb(255, 155, 43);
+  --verde-claro: rgb(210, 208, 71);
+  font-family: "MuseoModerno";
+}
+
+body{
+    margin: 0;
+}
+
+#btnRegresar{
+    background-image: radial-gradient(100% 100% at 100% 0, var(--verde-claro) 0, var(--naranja-zanahoria) 100%);
+    border: 4px rgb(31, 51, 71) solid ;
+    position: absolute;
+    border-radius: 50%;
+    margin: 20px;
+    height: 90px;
+    width: 90px;
+    cursor: pointer;
+    transition: 150ms all;
+}
+
+#btnRegresar img{
+    height: 100%;
+    width: 100%;
+}
+
+#btnRegresar:hover{
+    height: 110px;
+    width: 110px;
+}
+
+/* Titulo */
+#idTitulo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+#idTitulo h1{
+    background: linear-gradient(0deg, var(--turqueza) 0%, var(--verde-claro) 100%);
+    color: var(--amarillo-palido);
+    border-radius: 30px;
+    border: 10px solid transparent;
+    min-width: max-content;
+    padding-inline: 10px;
+    font-family: "MajorMonoDisplay";
+    font-size: 60px;
+}

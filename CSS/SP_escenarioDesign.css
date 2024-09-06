@@ -27,13 +27,20 @@ body{
     position: absolute;
     border-radius: 50%;
     margin: 20px;
+    height: 90px;
+    width: 90px;
     cursor: pointer;
-    transition: 200ms all;
+    transition: 150ms all;
 }
 
-#btnRegresar img:hover{
-    height: 80px;
-    width: 80px;
+#btnRegresar img{
+    height: 100%;
+    width: 100%;
+}
+
+#btnRegresar:hover{
+    height: 110px;
+    width: 110px;
 }
 
 /* Título */
@@ -214,8 +221,8 @@ input[type='radio']{
 /* Fondo en movimiento*/
 
 .wrapper {
-  animation: scroll 10s linear infinite;
-  background: url("../Images/mInicio/16Ejemplo.jpg") var(--azul-pastel);
+  animation: scroll 12s linear infinite;
+  background: url("../Images/Backgrounds/patronAzul.png") var(--azul-pastel);
   background-blend-mode: multiply;
   height: 100vh;
   min-width: 360px;
@@ -226,7 +233,7 @@ input[type='radio']{
 
 @keyframes scroll {
   100% {
-    background-position: 0px -3750%;
+    background-position: 0px -475%;
   }
 }
 
