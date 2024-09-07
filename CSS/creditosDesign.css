@@ -15,8 +15,9 @@
   --naranja-zanahoria: rgb(255, 155, 43);
   --verde-claro: rgb(210, 208, 71);
   font-family: "MuseoModerno";
-  background: url(../Images/Backgrounds/16Ejemplo.jpg) rgb(188, 122, 65);
-  background-blend-mode: multiply;
+  background: url(../Images/Backgrounds/horizontalNaranja.png);
+  background-size: cover;
+  background-position: center;
 }
 
 body{
@@ -226,7 +227,7 @@ table a{
 }
 
 table a:visited{
-    color: rgb(241, 233, 121);
+    color: rgb(246, 239, 139);
 }
 
 th{

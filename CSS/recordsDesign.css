@@ -15,9 +15,8 @@
   --naranja-zanahoria: rgb(255, 155, 43);
   --verde-claro: rgb(210, 208, 71);
   font-family: "MuseoModerno";
-  background: url(../Images/Backgrounds/16Ejemplo.jpg) rgb(31, 51, 71) no-repeat;
+  background: url(../Images/Backgrounds/lateralesAzulOscuro.png);
   background-size: cover;
-  background-blend-mode: multiply;
 }
 
 body{
