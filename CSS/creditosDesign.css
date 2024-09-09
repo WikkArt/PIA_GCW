@@ -129,7 +129,7 @@ body{
     margin-right: 30px;
 }
 
-#listaCreadores, #listaModelos, #listaIconos{
+#listaCreadores, #listaModelos, #listaIconos, #listaHUD{
     flex-direction: column;
     justify-content: center;
     height: 90vh;
@@ -256,6 +256,7 @@ th:last-child {
 }
 
 /* Tabla de Modelos */
+
 #idTablaModelos img{
     height: 118px;
     width: 118px;
@@ -265,9 +266,18 @@ th:last-child {
 }
 
 /* Tabla de Iconos */
+
 #idTablaIconos img{
     height: 52px;
     width: 52px;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* Tabla de HUD */
+
+#idTablaHUD img{
+    width: 80px;
     display: flex;
     margin: 0 auto;
 }
